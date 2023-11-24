@@ -28,7 +28,14 @@ images:
 
 # You can organize your builds with tags
 tags: ['gcp-cloud-build-sample-build']
-
+# deploy container image to GKE
+- name: "gcr.io/cloud-builders/gke-deploy"
+  args:
+  - run
+  - --filename=dol-uim-benefits-deployment-dev
+  - --image=gcr.io/dol-uim-devops/helloworld-image@sha256:e5bd0c0634814f70cd8cbe75593ca51e43f6f589415430affea0af48def630d9/latest
+  - --location=${_CLOUDSDK_COMPUTE_ZONE}
+  - --cluster=${_CLOUDSDK_CONTAINER_CLUSTER}
 # You can configure more options than the ones listed here. Visit
 # https://cloud.google.com/cloud-build/docs/build-config to see the full list of
 # available options.
