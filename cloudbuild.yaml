@@ -10,6 +10,6 @@ steps:
   args:
   - run
   - --filename=helloworld-image
-  - --image=gcr.io/dol-uim-devops/helloworld-image@sha256:450d94b7eb9b8c44b0001e7475d7d47c97e42b0066c099ae208cadbc4b994e0e:latest
+  - --image=gcr.io/dol-uim-devops/helloworld-image:latest
   - --location=${_CLOUDSDK_COMPUTE_ZONE}
   - --cluster=${_CLOUDSDK_CONTAINER_CLUSTER}
