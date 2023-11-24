@@ -29,7 +29,7 @@ images:
 # You can organize your builds with tags
 tags: ['gcp-cloud-build-sample-build']
 # deploy container image to GKE
-- name: "gcr.io/cloud-builders/gke-deploy"
+- name: 'gcr.io/cloud-builders/gke-deploy'
   args:
   - run
   - --filename=dol-uim-benefits-deployment-dev
