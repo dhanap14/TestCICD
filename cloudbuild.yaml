@@ -33,7 +33,7 @@ tags: ['gcp-cloud-build-sample-build']
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
   - run
-  - --filename=credentials('dol-uim-app-dev-gke')
+  - --filename=dol-uim-benefits-deployment-dev
   - --image=gcr.io/dol-uim-devops/helloworld-image@sha256:e5bd0c0634814f70cd8cbe75593ca51e43f6f589415430affea0af48def630d9/latest
   - --location=us-east4
   - --cluster=dol-uim-app-dev-gke-cr-001
