@@ -29,8 +29,6 @@ images:
 # You can organize your builds with tags
 tags: ['gcp-cloud-build-sample-build']
 
-steps:
-...
 # deploy container image to GKE
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
