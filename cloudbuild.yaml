@@ -10,5 +10,6 @@ steps:
   args:
   - run
   - --image=gcr.io/dol-uim-devops/helloworld-image:latest
+  - --project=dol-uim-app-dev
   - --location=us-east4
   - --cluster=dol-uim-app-dev-gke-cr-001
