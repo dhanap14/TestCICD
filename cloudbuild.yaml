@@ -10,5 +10,5 @@ steps:
   args:
   - run
   - --image=gcr.io/dol-uim-devops/helloworld-image:latest
-  - --location=${_CLOUDSDK_COMPUTE_ZONE}
-  - --cluster=${_CLOUDSDK_CONTAINER_CLUSTER}
+  - --location=us-east4
+  - --cluster=dol-uim-app-dev-gke-cr-001
