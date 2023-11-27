@@ -15,4 +15,4 @@ steps:
   - --cluster=dol-uim-app-dev-gke-cr-001
 options:
   pool:
-    name: 'projects/dol-uim-app-dev/locations/us-east4/workerPools/dol-uim-app-dev-gke'
+    name: 'projects/dol-uim-devops/locations/us-east4/workerPools/Cloud-Build-PrivatePools'
