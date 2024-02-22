@@ -1,5 +1,4 @@
 steps:
-  # build the container image
-- name: "gcr.io/cloud-builders/git"
-   args: ["push", "-u", "main", "SecondBranch"]
-   dir: "git/TestCICD"
+   - name: "gcr.io/cloud-builders/git"
+     args: ["push", "-u", "main", "SecondBranch"]
+     dir: "git/TestCICD"
