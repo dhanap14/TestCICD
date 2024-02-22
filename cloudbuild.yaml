@@ -6,5 +6,5 @@ steps:
      args: ["checkout",  "main"]
      dir: "git/TestCICD"
    - name: "gcr.io/cloud-builders/git"
-     args: ["merge", "origin", "SecondBranch"]
+     args: ["merge", "origin", "origin/SecondBranch"]
      dir: "git/TestCICD"
