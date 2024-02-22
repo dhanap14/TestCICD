@@ -8,9 +8,9 @@ steps:
    - name: gcr.io/cloud-builders/git
      args: [
             "-c",
-            'user.name="Cloud Build Service Account"',
+            'user.name="dhanap14"',
             "-c",
-            'user.email="241199664610@cloudbuild.gserviceaccount.com"',
+            'user.email="dhanasekar.paramasivam@labor.ny.gov"',
             "merge", 
             "origin/SecondBranch",
             "--allow-unrelated-histories"]
