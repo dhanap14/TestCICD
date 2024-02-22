@@ -3,7 +3,7 @@ steps:
      args: ["fetch"]
      dir: "git/TestCICD"
    - name: gcr.io/cloud-builders/git
-     args: ["checkout",  "SecondBranch"]
+     args: ["checkout",  "main"]
      dir: "git/TestCICD"
    - name: "gcr.io/cloud-builders/git"
      args: [
@@ -12,6 +12,6 @@ steps:
             "-c",
             'user.email="dhanasekar.paramasivam@labor.ny.gov"',
             "merge", 
-            "origin/main",
+            "origin/SecondBranch",
             "--allow-unrelated-histories"]
      dir: "git/TestCICD"
