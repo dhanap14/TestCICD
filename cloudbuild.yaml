@@ -1,4 +1,7 @@
 steps:
+   - name: gcr.io/cloud-builders/git
+     args: ["checkout", "main"]
+     dir: "git/TestCICD"
    - name: "gcr.io/cloud-builders/git"
-     args: ["push", "-u", "origin", "SecondBranch"]
+     args: ["merge", "SecondBranch"]
      dir: "git/TestCICD"
