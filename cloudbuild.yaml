@@ -15,3 +15,6 @@ steps:
             "origin/SecondBranch",
             "--allow-unrelated-histories"]
      dir: "git/TestCICD"
+   - name: gcr.io/cloud-builders/git
+     args: ["push", "-u", "origin", "main"]
+     dir: "git/TestCICD"
