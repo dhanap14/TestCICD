@@ -1,18 +1,5 @@
 steps:
   # build the container image
-- name: "gcr.io/cloud-builders/docker"
-  args: ["build", "-t", "gcr.io/$PROJECT_ID/helloworld-image", "."]
-  # push container image
-- name: "gcr.io/cloud-builders/docker"
-  args: ["push", "gcr.io/$PROJECT_ID/helloworld-image"]
-  # deploy container image to GKE
-- name: "gcr.io/cloud-builders/gke-deploy"
-  args:
-  - run
-  - --image=gcr.io/dol-uim-devops/helloworld-image:latest
-  - --project=dol-uim-app-dev
-  - --location=us-east4
-  - --cluster=dol-uim-app-dev-gke-cr-001
-options:
-  pool:
-    name: 'projects/dol-uim-devops/locations/us-east4/workerPools/Cloud-Build-PrivatePools'
+- name: "gcr.io/cloud-builders/git"
+   args: ["push", "-u", "main", "SecondBranch"]
+   dir: "git/TestCICD"
