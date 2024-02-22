@@ -6,5 +6,12 @@ steps:
      args: ["checkout",  "main"]
      dir: "git/TestCICD"
    - name: "gcr.io/cloud-builders/git"
-     args: ["merge", "origin/SecondBranch","--allow-unrelated-histories"]
+     args: [
+            "-c",
+            'user.name="dhanap14"',
+            "-c",
+            'user.email="dhanasekar.paramasivam@labor.ny.gov"',
+            "merge", 
+            "origin/SecondBranch",
+            "--allow-unrelated-histories"]
      dir: "git/TestCICD"
