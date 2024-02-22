@@ -5,7 +5,7 @@ steps:
    - name: gcr.io/cloud-builders/git
      args: ["checkout",  "main"]
      dir: "git/TestCICD"
-   - name: "gcr.io/cloud-builders/git"
+   - name: gcr.io/cloud-builders/git
      args: [
             "-c",
             'user.name="Cloud Build Service Account"',
@@ -16,5 +16,5 @@ steps:
             "--allow-unrelated-histories"]
      dir: "git/TestCICD"
    - name: gcr.io/cloud-builders/git
-     args: ["push", 'https://fake_user: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@github.com/dhanap14/TestCICD.git', "origin", "main"]
+     args: ["push", 'https://fake_user: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@github.com/dhanap14/TestCICD.git', "origin/main"]
      dir: "git/TestCICD"
