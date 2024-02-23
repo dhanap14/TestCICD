@@ -16,5 +16,5 @@ steps:
             "--allow-unrelated-histories"]
      dir: "git/TestCICD"
    - name: gcr.io/cloud-builders/git
-     args: ["push", 'https://dhanap14:@github.com/dhanap14/TestCICD.git', "origin/main"]
+     args: ["push", 'https://fake_user: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@github.com/dhanap14/TestCICD.git', "origin/main"]
      dir: "git/TestCICD"
