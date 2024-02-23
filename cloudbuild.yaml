@@ -1,12 +1,12 @@
 steps:
    - name: gcr.io/cloud-builders/git
-     args: ["fetch", "origin/main"]
+     args: ["fetch"]
      dir: "git/TestCICD"
      env:
        - "GH_TOKEN=$_GH_TOKEN"
        
    - name: gcr.io/cloud-builders/git
-     args: ["checkout",  "origin/main"]
+     args: ["checkout",  "main"]
      dir: "git/TestCICD"
      
    - name: gcr.io/cloud-builders/git
