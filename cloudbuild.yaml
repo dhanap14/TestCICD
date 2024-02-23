@@ -10,6 +10,10 @@ steps:
      dir: "git/TestCICD"
      
    - name: gcr.io/cloud-builders/git
+     args: ["pull"]
+     dir: "git/TestCICD"
+     
+   - name: gcr.io/cloud-builders/git
      args: [
             "-c",
             'user.name="dhanap14"',
@@ -19,11 +23,7 @@ steps:
             "origin/SecondBranch",
             "--allow-unrelated-histories"]
      dir: "git/TestCICD"
-
-   - name: gcr.io/cloud-builders/git
-     args: ["pull"]
-     dir: "git/TestCICD"
      
    - name: gcr.io/cloud-builders/git
-     args: ["push", 'https://fake_user:$_GH_TOKEN@github.com/dhanap14/TestCICD.git', "origin/main"]
+     args: ["push", 'https://fake_user:$_GH_TOKEN@github.com/dhanap14/TestCICD.git']
      dir: "git/TestCICD"
