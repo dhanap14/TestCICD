@@ -1,6 +1,6 @@
 steps:
    - name: gcr.io/cloud-builders/git
-     args: ["fetch"]
+     args: ["pull"]
      dir: "git/TestCICD"
      env:
        - "GH_TOKEN=$_GH_TOKEN"
