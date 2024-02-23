@@ -4,9 +4,15 @@ steps:
      dir: "git/TestCICD"
      env:
        - "GH_TOKEN=$_GH_TOKEN"
+       
    - name: gcr.io/cloud-builders/git
-     args: ["pull",  "origin/main"]
+     args: ["checkout",  "main"]
      dir: "git/TestCICD"
+     
+   - name: gcr.io/cloud-builders/git
+     args: ["pull"]
+     dir: "git/TestCICD"
+     
    - name: gcr.io/cloud-builders/git
      args: [
             "-c",
@@ -17,6 +23,7 @@ steps:
             "origin/SecondBranch",
             "--allow-unrelated-histories"]
      dir: "git/TestCICD"
+     
    - name: gcr.io/cloud-builders/git
      args: ["push", 'https://fake_user:$_GH_TOKEN@github.com/dhanap14/TestCICD.git', "origin/main"]
      dir: "git/TestCICD"
