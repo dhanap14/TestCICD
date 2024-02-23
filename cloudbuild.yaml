@@ -1,12 +1,16 @@
 steps:
-   - name: gcr.io/cloud-builders/git
-     args: ["fetch"]
-     dir: "git/TestCICD"
-     env:
-       - "GH_TOKEN=$_GH_TOKEN"
+#   - name: gcr.io/cloud-builders/git
+#     args: ["fetch"]
+#     dir: "git/TestCICD"
+#     env:
+#       - "GH_TOKEN=$_GH_TOKEN"
        
    - name: gcr.io/cloud-builders/git
      args: ["checkout",  "main"]
+     dir: "git/TestCICD"
+     
+   - name: gcr.io/cloud-builders/git
+     args: ["pull"]
      dir: "git/TestCICD"
      
    - name: gcr.io/cloud-builders/git
@@ -19,11 +23,7 @@ steps:
             "origin/SecondBranch",
             "--allow-unrelated-histories"]
      dir: "git/TestCICD"
-
-   - name: gcr.io/cloud-builders/git
-     args: ["pull"]
-     dir: "git/TestCICD"
      
    - name: gcr.io/cloud-builders/git
-     args: ["push", 'https://fake_user:$_GH_TOKEN@github.com/dhanap14/TestCICD.git', "origin/main"]
+     args: ["push", 'https://fake_user:$_GH_TOKEN@github.com/dhanap14/TestCICD.git']
      dir: "git/TestCICD"
