@@ -5,7 +5,7 @@ steps:
      env:
        - "GH_TOKEN=$_GH_TOKEN"
    - name: gcr.io/cloud-builders/git
-     args: ["pull",  "main"]
+     args: ["pull",  "origin/main"]
      dir: "git/TestCICD"
    - name: gcr.io/cloud-builders/git
      args: [
