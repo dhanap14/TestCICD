@@ -10,10 +10,6 @@ steps:
      dir: "git/TestCICD"
      
    - name: gcr.io/cloud-builders/git
-     args: ["pull"]
-     dir: "git/TestCICD"
-     
-   - name: gcr.io/cloud-builders/git
      args: [
             "-c",
             'user.name="dhanap14"',
@@ -22,6 +18,10 @@ steps:
             "merge", 
             "origin/SecondBranch",
             "--allow-unrelated-histories"]
+     dir: "git/TestCICD"
+
+   - name: gcr.io/cloud-builders/git
+     args: ["pull"]
      dir: "git/TestCICD"
      
    - name: gcr.io/cloud-builders/git
