@@ -20,7 +20,7 @@ steps:
             "-c",
             'user.email="dhanasekar.paramasivam@labor.ny.gov"',
             "merge", 
-            "origin/SecondBranch",
+            "origin/ThirdBranch",
             "--allow-unrelated-histories"]
      dir: "git/TestCICD"
      
